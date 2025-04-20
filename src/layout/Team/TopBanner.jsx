@@ -33,7 +33,7 @@ export default function TopBanner({data, favoriteTeams, setFavoriteTeams}) {
                 <ImageWithBorder className={"lg:h-28 lg:w-28 w-16 h-16 object-contain"} logo={data.image_src}></ImageWithBorder>
                 <div>
                     <div className={"flex flex-row items-center gap-3"}>
-                        <Title className={"font-bold text-3xl"} text={data.name + " " + data.surname}></Title>
+                        <Title className={"font-bold text-3xl"} text={data.name + " " + (data.surname ?? "")}></Title>
                         <div
                             className={`text-white flex flex-col items-center cursor-pointer ${isFavorited ? "" : "not-favorite"}`}
                             onClick={() => handleFavoriteClick(data.id)}
